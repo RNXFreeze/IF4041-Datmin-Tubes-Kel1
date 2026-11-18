@@ -36,3 +36,28 @@ def select_scope(funnel: Funnel) -> pa.Table:
     table = table.filter(pc.invert(withdrawn))
     funnel.add("PRE-01", "Bukan makalah yang ditarik (publtype withdrawn)", before, table.num_rows)
     return table
+
+
+def missing_report(table: pa.Table) -> pd.DataFrame:
+    def blank(col):
+        return pc.sum(pc.equal(pc.utf8_trim_whitespace(pc.fill_null(col, "")), "")).as_py()
+
+    authors = pc.list_flatten(table["authors"])
+    rows = {
+        "authors (tanpa penulis)": pc.sum(pc.equal(pc.list_value_length(table["authors"]), 0)).as_py(),
+        "authors (nama kosong)": blank(authors),
+        "title": blank(table["title"]),
+        "year": blank(table["year"]),
+        "booktitle": blank(table["booktitle"]),
+        "crossref": blank(table["crossref"]),
+    }
+    report = pd.Series(rows, name="n_missing").to_frame()
+    report["pct"] = (100 * report["n_missing"] / table.num_rows).round(3)
+    return report
+
+
+def handle_missing(table: pa.Table, funnel: Funnel) -> pa.Table:
+    before = table.num_rows
+    table = table.filter(pc.greater(pc.list_value_length(table["authors"]), 0))
+    funnel.add("PRE-02", "Memiliki minimal satu penulis", before, table.num_rows)
+    return table
