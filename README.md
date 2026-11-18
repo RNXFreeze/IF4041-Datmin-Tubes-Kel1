@@ -18,6 +18,8 @@ Analisis popularitas konferensi dan pola asosiasi antarkonferensi pada publikasi
 
 Gunakan Python 3.13, lalu pasang dependensi dengan `pip install -r requirements.txt`.
 
-Berkas `dblp.xml.gz` dan `dblp.dtd` dari https://dblp.org/xml/ disimpan di luar
-repositori, secara bawaan di `~/dblp-data`. Lokasi lain dapat diatur melalui
-*environment variable* `DBLP_RAW_DIR`.
+Dataset yang digunakan adalah rilis DBLP 2026-11-01
+([10.4230/dblp.xml.2026-11-01](https://doi.org/10.4230/dblp.xml.2026-11-01)).
+Unduh dengan `python src/download.py`, lalu ekstrak dengan `python src/extract.py`.
+Berkas data disimpan di luar repositori, secara bawaan di `~/dblp-data`. Lokasi lain
+dapat diatur melalui *environment variable* `DBLP_RAW_DIR`.
