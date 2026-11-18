@@ -44,6 +44,10 @@ def fetch(url: str, dest: Path) -> None:
     print(f"OK {dest.name} md5={actual} size={dest.stat().st_size}")
 
 
-if __name__ == "__main__":
+def download():
     fetch(DTD_URL, DBLP_DTD)
     fetch(XML_URL, DBLP_XML)
+
+
+if __name__ == "__main__":
+    download()
