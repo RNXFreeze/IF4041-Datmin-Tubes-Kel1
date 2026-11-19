@@ -1,0 +1,8 @@
+tahap,langkah,jumlah
+Duplikat,Nama penulis ganda dalam satu makalah dihapus,99
+Normalisasi author,Nama unik sebelum normalisasi,1820355
+Normalisasi author,Nama unik setelah normalisasi,1817265
+Normalisasi author,Kemunculan nama yang diubah,6018
+Normalisasi venue,Variasi booktitle,8784
+Normalisasi venue,Venue setelah normalisasi,4876
+Konsistensi tahun,Tahun dikonversi ke bilangan bulat,1996703

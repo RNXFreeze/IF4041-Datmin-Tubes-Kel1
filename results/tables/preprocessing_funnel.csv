@@ -1,0 +1,9 @@
+tahap,langkah,sebelum,sesudah,dihapus
+Seleksi cakupan,Jenis publikasi inproceedings,13073341,3994940,9078401
+Seleksi cakupan,Tahun 2015–2025,3994940,2003279,1991661
+Seleksi cakupan,Seri konferensi/workshop (key conf/),2003279,2000116,3163
+Seleksi cakupan,Bukan makalah yang ditarik (publtype withdrawn),2000116,1998994,1122
+Missing values,Memiliki minimal satu penulis,1998994,1997863,1131
+Duplikat,Key unik,1997863,1997863,0
+Duplikat,"Makalah unik (judul, tahun, seri venue, penulis)",1997863,1996703,1160
+Konsistensi tahun,Tahun bilangan bulat dalam 2015–2025,1996703,1996703,0
