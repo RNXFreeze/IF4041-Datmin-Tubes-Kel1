@@ -3,6 +3,7 @@
 *.dtd
 data/*
 !data/.gitkeep
+!data/README.md
 
 __pycache__/
 *.py[cod]
