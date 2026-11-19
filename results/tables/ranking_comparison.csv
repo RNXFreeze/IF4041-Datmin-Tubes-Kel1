@@ -1,0 +1,12 @@
+venue_id,venue_name,n_papers,rank_papers,n_authors,rank_authors,rank_change,authors_per_paper,papers_per_author,unique_authors_per_paper
+nips,NeurIPS,25275,1,57358,1,0,4.96,2.19,2.27
+icassp,ICASSP,21125,2,41063,3,-1,4.09,2.11,1.94
+hci,HCI,19912,3,37845,5,-2,3.47,1.83,1.9
+igarss,IGARSS,19685,4,35207,6,-2,4.72,2.64,1.79
+aaai,AAAI,18443,5,44683,2,3,4.45,1.84,2.42
+cvpr,CVPR,17429,6,34940,7,-1,5.14,2.56,2.0
+embc,EMBC,14677,7,39311,4,3,4.93,1.84,2.68
+chi,CHI,14648,8,29617,13,-5,4.49,2.22,2.02
+emnlp,EMNLP,14452,9,33355,8,1,4.98,2.16,2.31
+icml,ICML,13701,10,31659,9,1,4.53,1.96,2.31
+iros,IROS,12832,12,31178,10,2,4.45,1.83,2.43
