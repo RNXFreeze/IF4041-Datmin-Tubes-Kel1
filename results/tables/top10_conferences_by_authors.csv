@@ -1,0 +1,11 @@
+rank,venue_id,venue_name,n_authors,pct_authors,n_papers,rank_papers
+1,nips,NeurIPS,57358,3.16,25275,1
+2,aaai,AAAI,44683,2.46,18443,5
+3,icassp,ICASSP,41063,2.26,21125,2
+4,embc,EMBC,39311,2.16,14677,7
+5,hci,HCI,37845,2.08,19912,3
+6,igarss,IGARSS,35207,1.94,19685,4
+7,cvpr,CVPR,34940,1.92,17429,6
+8,emnlp,EMNLP,33355,1.84,14452,9
+9,icml,ICML,31659,1.74,13701,10
+10,iros,IROS,31178,1.72,12832,12
