@@ -181,6 +181,30 @@ def apply_venues(table: pa.Table, venues: pd.DataFrame) -> pa.Table:
     return table
 
 
+def year_consistency(table: pa.Table) -> pd.DataFrame:
+    years = pd.DataFrame({
+        "year": table["year"].to_pandas(),
+        "crossref_year": table["crossref"].to_pandas().str.extract(r"/(\d{4})")[0],
+    })
+    compared = years.dropna(subset=["crossref_year"])
+    diff = compared["year"].astype(int) - compared["crossref_year"].astype(int)
+    return pd.Series({
+        "Tahun berformat 4 digit": int(years["year"].str.fullmatch(r"\d{4}").sum()),
+        "Tahun di luar periode": int((~years["year"].astype(int).between(YEAR_MIN, YEAR_MAX)).sum()),
+        "Memiliki tahun pada crossref": len(compared),
+        "Tahun berbeda dari crossref": int((diff != 0).sum()),
+    }).to_frame("n_records")
+
+
+def normalize_year(table: pa.Table, funnel: Funnel) -> pa.Table:
+    before = table.num_rows
+    year = pc.cast(table["year"], pa.int16())
+    table = table.set_column(table.schema.get_field_index("year"), "year", year)
+    table = table.filter(pc.and_(pc.greater_equal(year, YEAR_MIN), pc.less_equal(year, YEAR_MAX)))
+    funnel.add("Konsistensi tahun", f"Tahun bilangan bulat dalam {YEAR_MIN}–{YEAR_MAX}", before, table.num_rows)
+    return table
+
+
 def handle_missing(table: pa.Table, funnel: Funnel) -> pa.Table:
     before = table.num_rows
     table = table.filter(pc.greater(pc.list_value_length(table["authors"]), 0))
