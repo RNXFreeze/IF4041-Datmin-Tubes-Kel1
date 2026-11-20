@@ -1,0 +1,5 @@
+min_support_pct,min_support_count,n_transactions,n_frequent_itemsets,n_frequent_1,n_frequent_2,n_frequent_3,n_frequent_4plus,max_itemset_size,n_rules_confidence_50pct,elapsed_seconds_after_index
+0.1,1818,1817265,1462,582,386,322,172,6,1225,2.946
+0.5,9087,1817265,77,60,16,1,0,3,7,0.039
+1,18173,1817265,29,28,1,0,0,2,1,0.016
+2,36346,1817265,5,5,0,0,0,1,0,0.01

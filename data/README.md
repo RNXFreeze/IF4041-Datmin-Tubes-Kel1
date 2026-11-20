@@ -45,6 +45,20 @@ pemisah koma, dan tanda kutip pada setiap nilai teks.
 - Nama penulis mempertahankan nomor pembeda homonim dari DBLP, misalnya `Jian Sun 0001`.
   Terdapat 1.817.265 penulis unik.
 
+## Dataset Transaksi (Task 3)
+
+Jalankan `python src/transactions.py` setelah `paper_author.parquet` tersedia. Hasilnya:
+
+| File | Kunci transaksi | Kolom lain |
+|------|-----------------|------------|
+| `author_transactions.parquet` | `author` | `venue_ids` (list string), `n_items` (int) |
+| `author_year_transactions.parquet` | `author`, `year` | `venue_ids` (list string), `n_items` (int) |
+
+Setiap `venue_ids` berisi `venue_id` konferensi dan workshop yang unik dan terurut.
+Makalah berulang di venue yang sama tidak menambah item. Tahun pada transaksi kedua
+adalah tahun publikasi makalah, sehingga penulis dapat muncul pada beberapa tahun.
+Kedua file dihasilkan dari Parquet bersih dan tidak disimpan di Git.
+
 ## Memperoleh Dataset
 
 File dapat diunduh dari folder Google Drive kelompok, lalu diletakkan di folder ini.

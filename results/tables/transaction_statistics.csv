@@ -1,0 +1,3 @@
+representation,n_transactions,n_item_occurrences,n_single_item,mean_items,median_items,max_items,n_unique_items
+author,1817265,4918319,1057806,2.706,1.0,337,4876
+author_year,4080856,6531671,2891570,1.601,1.0,86,4876
