@@ -1,0 +1,5 @@
+min_support_pct,itemsets_identical,rules_identical
+0.1,True,True
+0.5,True,True
+1,True,True
+2,True,True
