@@ -1,0 +1,2 @@
+antecedent,consequent,itemset_size,support_count,support,support_pct,confidence,confidence_pct,lift
+"[""icml""]","[""nips""]",2,18423,0.010137761966471594,1.0137761966471595,0.5819198332227803,58.19198332227803,18.436879698064715
