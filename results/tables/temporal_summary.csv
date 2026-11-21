@@ -1,0 +1,5 @@
+period,n_transactions,n_frequent_itemsets,n_frequent_1,n_frequent_2,n_frequent_3,n_frequent_4plus,n_rules
+2015-2017,921704,349,340,9,0,0,1
+2018-2020,1080198,324,306,18,0,0,0
+2021-2023,1194700,353,308,42,3,0,3
+2024-2025,884254,484,297,127,51,9,57

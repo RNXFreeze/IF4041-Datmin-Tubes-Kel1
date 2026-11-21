@@ -1,0 +1,2 @@
+antecedent,consequent,itemset_size,support_count,support,support_pct,confidence,confidence_pct,lift
+"[""ecoc""]","[""ofc""]",2,1720,0.0018661088592433145,0.18661088592433145,0.5158968206358728,51.58968206358728,59.751716909696725
